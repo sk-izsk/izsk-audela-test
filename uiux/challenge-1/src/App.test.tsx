@@ -1,9 +1,13 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { App } from './App';
+import { AppProvider } from './AppProvider';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('App renders correctly', () => {
+  const { asFragment } = render(
+    <AppProvider>
+      <App />
+    </AppProvider>,
+  );
+  expect(asFragment()).toMatchSnapshot();
 });
