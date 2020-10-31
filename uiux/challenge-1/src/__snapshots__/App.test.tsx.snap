@@ -2,8 +2,39 @@
 
 exports[`App renders correctly 1`] = `
 <DocumentFragment>
-  <div>
-    hello
+  <div
+    class="mainContainer-0-2-1"
+  >
+    <div
+      class="_2xbD- inputContainer-0-2-3 textField-0-2-2"
+    >
+      <div
+        class="_fWLwS"
+      >
+        <label
+          class="_Mk5N_"
+          for="_77467_"
+        >
+          <div
+            class="_3yPwv _2BgaH _1QRSN _1uvOH "
+          />
+        </label>
+        <input
+          class="_U6nBC _2nHt_ "
+          id="_77467_"
+          style="width: 800px; min-height: undefinedpx;"
+          type="text"
+          value=""
+        />
+        <div
+          class="_3t8tT"
+        >
+          <div
+            class="_3yPwv _2HbLl _1QRSN _1uvOH _2Lw0g"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
