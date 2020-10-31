@@ -1,21 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createUseStyles } from 'react-jss';
+import { CustomTheme } from './theme/theme';
 
-function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const useStyles = createUseStyles((theme: CustomTheme) => ({
+  '@global': {
+    body: {
+      padding: 0,
+      margin: 0,
+      backgroundColor: theme.colors.primaryColor,
+      fontFamily: theme.fontProperties.fontFamily,
+      scrollBehavior: 'smooth',
+    },
+  },
+  loaderContainer: {
+    display: 'flex',
+    width: '100vw',
+    height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+}));
 
-export default App;
+const App = () => {
+  useStyles();
+  return <div>hello</div>;
+};
+
+export { App };
